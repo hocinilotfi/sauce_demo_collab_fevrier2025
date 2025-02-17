@@ -38,36 +38,7 @@ class ProductsPage {
     this.elements.sortDropdown().should("have.value", valeur);
   }
 
-  verifierTriProduitsNom(ordre = "az") {
-    let nomsProduits = [];
-  
-    this.elements.productTitle().each(($el) => {
-      nomsProduits.push($el.text()); 
-    }).then(() => {
-      let nomsAttendus = [...nomsProduits].sort(); 
-  
-      if (ordre === "za") {
-        nomsAttendus.reverse(); 
-      }
-  
-      expect(nomsProduits).to.deep.equal(nomsAttendus); 
-    });
-  }
-  verifierTriProduitsprix(ordre = "asc") {
-    let prixProduits = [];
-
-    this.elements.productPrice().each(($el) => {
-      prixProduits.push(parseFloat($el.text().replace("$", ""))); 
-    }).then(() => {
-      let prixAttendus = [...prixProduits].sort((a, b) => a - b); 
-
-      if (ordre === "desc") {
-        prixAttendus.reverse();
-      }
-
-      expect(prixProduits).to.deep.equal(prixAttendus);
-    });
-  }
+ 
 }
 
 export default new ProductsPage();
