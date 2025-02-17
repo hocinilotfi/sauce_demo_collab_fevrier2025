@@ -59,7 +59,7 @@ class ProductsPage {
       expect(nomsProduits).to.deep.equal(nomsAttendus); 
     });
   }
-  verifierTriProduitsPrix(ordre = "asc") {
+  verifierTriProduitsprix(ordre = "asc") {
     let prixProduits = [];
 
     this.elements.productPrice().each(($el) => {
