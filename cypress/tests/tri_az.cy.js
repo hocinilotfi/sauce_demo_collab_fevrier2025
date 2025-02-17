@@ -9,7 +9,10 @@ describe("Test Tri", () => {
             loginPage.saisirUsername("standard_user");
             loginPage.saisirPassword("secret_sauce");
             loginPage.loginPage();
-        }),
-        it("Se Connecter avec sur le site", () => {})
+        })       
     });
+
+    it("Tri Alphabétique A-Z", () => {
+        loginPage.
+    })
 })
