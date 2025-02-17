@@ -1,34 +1,31 @@
 import loginPage from "../pages/login.page"
 
 describe('login scenario', () => {
-  context('success', ()=>{
-    it('passes', () => {
+    it('correct user and correct pass', () => {
       cy.visit('https://www.saucedemo.com/')
       loginPage.login("standard_user", "secret_sauce")
+      cy.get("#react-burger-menu-btn").should("be.visible")
     })
-  })
 
-  context('correct user and wrong pass', ()=>{
-    it('passes', () => {
+
+
+    beforeEach('acces url', ()=>{
       cy.visit('https://www.saucedemo.com/')
+    })
+    it('correct user and wrong pass', () => {
       loginPage.login("standard_user", "secret_sauce1")
       loginPage.afficherErreur()
-    })
-  })
+    }),
 
-  context('correct pass and wrong user', ()=>{
-    it('passes', () => {
-      cy.visit('https://www.saucedemo.com/')
+    it('wrong user and correct pass', () => {
       loginPage.login("standard_user1", "secret_sauce")
       loginPage.afficherErreur()
-    })
-  })
+    }),
 
-  context('wrong pass and wrong user', ()=>{
-    it('passes', () => {
-      cy.visit('https://www.saucedemo.com/')
+    it('wrong user and wrong pass', () => {
       loginPage.login("standard_user1", "secret_sauce1")
       loginPage.afficherErreur()
     })
-  })
+
+
 })
