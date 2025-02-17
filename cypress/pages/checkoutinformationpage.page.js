@@ -24,7 +24,7 @@ class CheckoutInformationPage {
         this.elements.continueButton.click()
     }
 
-    completeCheckoutInformation({ firstName, lastName, postalCode }) {
+    completeCheckoutInformation( firstName, lastName, postalCode ) {
         this.enterFirstName(firstName)
         this.enterLastName(lastName)
         this.enterPostalCode(postalCode)
