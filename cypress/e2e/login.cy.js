@@ -14,17 +14,17 @@ describe('login scenario', () => {
     })
     it('correct user and wrong pass', () => {
       loginPage.login("standard_user", "secret_sauce1")
-      loginPage.afficherErreur()
+      cy.get('[data-test=error]').should("be.visible")
     }),
 
     it('wrong user and correct pass', () => {
       loginPage.login("standard_user1", "secret_sauce")
-      loginPage.afficherErreur()
+      cy.get('[data-test=error]').should("be.visible")
     }),
 
     it('wrong user and wrong pass', () => {
       loginPage.login("standard_user1", "secret_sauce1")
-      loginPage.afficherErreur()
+      cy.get('[data-test=error]').should("be.visible")
     })
 
 
