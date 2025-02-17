@@ -11,7 +11,7 @@ class cartPage {
    this.elements.continueButton().click();
  }
 
-  clickqueCartbutton(){
+  clickqueCartButton(){
        this.elements.Checkoutbuton().click();
   }
 
