@@ -53,7 +53,21 @@ class ProductsPage {
       expect(nomsProduits).to.deep.equal(nomsAttendus); 
     });
   }
-  
+  verifierTriProduitsPrix(ordre = "asc") {
+    let prixProduits = [];
+
+    this.elements.productPrice().each(($el) => {
+      prixProduits.push(parseFloat($el.text().replace("$", ""))); 
+    }).then(() => {
+      let prixAttendus = [...prixProduits].sort((a, b) => a - b); 
+
+      if (ordre === "desc") {
+        prixAttendus.reverse();
+      }
+
+      expect(prixProduits).to.deep.equal(prixAttendus);
+    });
+  }
 }
 
 export default new ProductsPage();
