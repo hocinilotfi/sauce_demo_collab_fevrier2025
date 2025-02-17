@@ -40,15 +40,11 @@ class ProductsPage {
     this.elements.sortDropdown().should("have.value", valeur);
   }
 
-  recuperationListTitreProduit(){
-    this.elements.productTitle();
-  }
 
   recuperationListTitreProduit(){
     this.elements.productTitle();
   }
 
- 
 }
 
 export default new ProductsPage();
