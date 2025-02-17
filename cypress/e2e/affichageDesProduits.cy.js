@@ -19,10 +19,6 @@ describe("Test affichage des produits", () => {
                 expect(produitsAffiches.length).to.be.greaterThan(0); 
             });
         });
-
-
-
-
         
     });
 });
