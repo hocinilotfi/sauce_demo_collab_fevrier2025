@@ -1,5 +1,3 @@
-<reference types="cypress" />
-
 class CheckoutInformationPage {
 
     elements={
