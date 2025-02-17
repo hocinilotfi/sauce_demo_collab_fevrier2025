@@ -7,9 +7,9 @@ class cartPage {
         removeButton: () => cy.get('#remove-sauce-labs-backpack"')
         
     }
- clickContinueButton(){
+  clickContinueButton(){
    this.elements.continueButton().click();
- }
+  }
 
   clickqueCartbutton(){
        this.elements.Checkoutbuton().click();

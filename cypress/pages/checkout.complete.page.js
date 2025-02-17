@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+
 
 class ChekoutCompletePage{
     elements = {
