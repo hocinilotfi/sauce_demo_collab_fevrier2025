@@ -1,6 +1,7 @@
 class ProductsPage {
     elements = {
       productTitle: () => cy.get(".inventory_item_name"),
+      productPrice: () => cy.get(".inventory_item_price"),
       addToCartButton: () => cy.get(".btn_inventory"),
       cartNumbre: () => cy.get(".shopping_cart_badge"),
       cartIcon: () => cy.get(".shopping_cart_link"),
@@ -39,10 +40,10 @@ class ProductsPage {
     this.elements.sortDropdown().should("have.value", valeur);
   }
 
-  // NGAB : 18/02/2025 list des titres 
   recuperationListTitreProduit(){
     this.elements.productTitle();
   }
 }
 
 export default new ProductsPage();
+
