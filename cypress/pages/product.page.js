@@ -1,11 +1,12 @@
 class ProductsPage {
     elements = {
       productTitle: () => cy.get(".inventory_item_name"),
+      productPrice: () => cy.get(".inventory_item_price"),
       addToCartButton: () => cy.get(".btn_inventory"),
       cartNumbre: () => cy.get(".shopping_cart_badge"),
       cartIcon: () => cy.get(".shopping_cart_link"),
       sortDropdown: () => cy.get(".product_sort_container"),
-      ajouterAuPanierBouton: (nomProduit) => cy.get(`[data-test="add-to-cart-${nomProduit}"]`),
+      ajouterAuPanierBouton: (nomProduit) => cy.get(`[data-test="add-to-cart-${nomProduit}"]`),//sélecteur dynam pour trouver le bouton d’un produit spécif
       retirerDuPanierBouton: (nomProduit) => cy.get(`[data-test="remove-${nomProduit}"]`),
     };
 
@@ -36,6 +37,23 @@ class ProductsPage {
   verifierTriSelectionne(valeur) {
     this.elements.sortDropdown().should("have.value", valeur);
   }
+
+  verifierTriProduitsNom(ordre = "az") {
+    let nomsProduits = [];
+  
+    this.elements.productTitle().each(($el) => {
+      nomsProduits.push($el.text()); 
+    }).then(() => {
+      let nomsAttendus = [...nomsProduits].sort(); 
+  
+      if (ordre === "za") {
+        nomsAttendus.reverse(); 
+      }
+  
+      expect(nomsProduits).to.deep.equal(nomsAttendus); 
+    });
+  }
+  
 }
 
 export default new ProductsPage();
