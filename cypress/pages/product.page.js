@@ -38,7 +38,6 @@ class ProductsPage {
     this.elements.sortDropdown().should("have.value", valeur);
   }
 
- 
 }
 
 export default new ProductsPage();
