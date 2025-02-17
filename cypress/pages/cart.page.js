@@ -4,7 +4,7 @@ class cartPage {
         cartButton: () => cy.get('#shopping_cart_container'),
         badgeButton: () => cy.get('[data-test="shopping-cart-badge"]'),
         continueButton: () => cy.get('#continue-shopping'),
-        removeButton: () => cy.get('#remove-sauce-labs-backpack"')
+        removeButton: () => cy.get('.btn.btn_secondary.btn_small.cart_button')
         
     }
  clickContinueButton(){
