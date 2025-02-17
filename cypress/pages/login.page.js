@@ -14,15 +14,17 @@ class LoginPage {
         this.elements.password().type(password)
     }
 
-    login(username, password) {
-        this.saisirPassword(username)
-        this.saisirPassword(password)
+    cliqueSurLoginButton(){
         this.elements.loginButton().click()
     }
 
-    afficherErreur() {
-        return this.elements.errorMessage().should('be.visible')
+    login(username, password) {
+        this.saisirUsername(username)
+        this.saisirPassword(password)
+        this.cliqueSurLoginButton()
     }
+
+
 
 }
 
