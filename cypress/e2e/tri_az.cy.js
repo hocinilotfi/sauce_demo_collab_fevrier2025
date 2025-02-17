@@ -7,7 +7,8 @@ describe("Test Tri", () => {
     beforeEach(() => {
         cy.visit("https://www.saucedemo.com");
 
-        loginPage.saisirUsername("standard_user");
+        loginPage.login("standard_user","secret_sauce")
+        
 
         // Vérifier que la redirection vers la page produit est correcte
         cy.url().should("include", "/inventory.html");
@@ -18,7 +19,7 @@ describe("Test Tri", () => {
 
         productPage.elements.productTitle()
             .then((elements) =>{
-                produitNonTrier = [...elements].map((el) => el.innerText.trim());
+                produitNonTrier =Array.from(elements).map((el) => el.innerText.trim());
             })
             .then(() => {
                 //Ont applique le Tri "A-Z"
@@ -29,10 +30,10 @@ describe("Test Tri", () => {
 
                 //Ont recupère les noms des produits 
                 productPage.elements.productTitle().then((elements)=>{
-                    const produitsApresTri = [...elements].map((el) => el.innerText.trim());
+                    const produitsApresTri = Array.from(elements).map((el) => el.innerText.trim());
 
                     // Vérifier que les produits sont bien triés dans l'ordre alphabétique
-                    const produitsManuelTrie = [...produitsAvantTri].sort();
+                    const produitsManuelTrie = Array.from(produitNonTrier).sort();
 
                     expect(produitsApresTri).to.deep.equal(produitsManuelTrie);
                 })
