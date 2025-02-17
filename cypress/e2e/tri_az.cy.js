@@ -5,12 +5,12 @@ import productPage from "../pages/product.page";
 
 describe("Test Tri", () => {
     beforeEach(() => {
-        it("Se connecter sur le site", () => {
-            cy.visit("https://www.saucedemo.com/");
-            loginPage.saisirUsername("standard_user");
-            loginPage.saisirPassword("secret_sauce");
-            loginPage.loginPage();
-        })       
+        cy.visit("https://www.saucedemo.com");
+
+        loginPage.saisirUsername("standard_user");
+
+        // Vérifier que la redirection vers la page produit est correcte
+        cy.url().should("include", "/inventory.html");
     });
 
     it("Tri Alphabétique A-Z", () => {
