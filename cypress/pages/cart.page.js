@@ -4,8 +4,8 @@ class cartPage {
         cartButton: () => cy.get('#shopping_cart_container'),
         badgeButton: () => cy.get('[data-test="shopping-cart-badge"]'),
         continueButton: () => cy.get('#continue-shopping'),
-        removeButton: () => cy.get('#remove-sauce-labs-backpack"')
-        
+        removeButton: () => cy.get('#remove-sauce-labs-backpack"'),
+        addedProducts: () => cy.get("[data-test='inventory-item-name']")
     }
  clickContinueButton(){
    this.elements.continueButton().click();
@@ -28,6 +28,9 @@ class cartPage {
     return this.elements.badgeButton();
 }
     
+  getAddedProducts(){
+    return this.elements.addedProducts();
+  }
 
   
 }
