@@ -8,7 +8,7 @@ class MenuPage{
     };
 
     sasirSurMenuButton() {
-        this.elements.menuBoutton().click(); 
+        this.elements.menuBoutton().click();
     }
     saisirAllItem(){
         this.elements.allItem().click();
