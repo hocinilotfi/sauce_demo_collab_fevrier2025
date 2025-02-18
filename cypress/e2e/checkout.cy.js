@@ -5,7 +5,7 @@ import productsPage from "../pages/product.page"
 import cartPage from "../pages/cart.page"
 import checkoutinformationpagePage from "../pages/checkoutinformationpage.page"
 import CheckoutOvervieuwPage from "../pages/CheckoutOvervieuw.page"
-import checkoutCompletePage from "../pages/checkout.complete.page"
+
 
 describe("checkout", () => {
 
@@ -25,6 +25,6 @@ describe("checkout", () => {
 
         CheckoutOvervieuwPage.cliquersurleButtonfinish()
 
-        checkoutCompletePage.dispImage().should("be.visible")
+        cy.get(".pony_express").should("be.visible")
     })
 })

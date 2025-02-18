@@ -3,14 +3,8 @@
 class ChekoutCompletePage{
     elements = {
 
-        image : ()=> cy.get(".pony_express"),
         backButton: ()=> cy.get('#back-to-products')
         
-    }
-
-
-    dispImage(){
-        return cy.elements.image();
     }
 
     clickBack(){

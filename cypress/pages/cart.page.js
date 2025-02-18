@@ -18,7 +18,6 @@ class cartPage {
   clickCheckoutButton(){
     this.elements.checkoutButton().click();
   }
-
   clickRemoveButton(){
     this.elements.removeButton().click();
   }
