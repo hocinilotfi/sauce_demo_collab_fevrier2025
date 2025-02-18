@@ -17,7 +17,7 @@ describe("Test Tri", () => {
     it("Tri Alphabétique A-Z", () => {
         let produitNonTrier = [];
 
-        productPage.elements.productTitle()
+        productPage.recuperationListTitreProduit()
             .then((elements) =>{
                 produitNonTrier =Array.from(elements).map((el) => el.innerText.trim());
             })
@@ -41,6 +41,27 @@ describe("Test Tri", () => {
     })
 
     it("Tri Alphabétique Z-A",()=>{
-        
+        let produitNonTrier = [];
+        productPage.recuperationListTitreProduit()
+            .then((elements)=>{
+                produitNonTrier = Array.from(elements).map((el)=> el.innerText.trim());
+            })
+            .then(() => {
+                //Ont applique le Tri "A-Z"
+                productPage.selectionnerTriPar("za");
+
+                //vérifier que le tri est bien appliqué
+                productPage.verifierTriSelectionne("za");
+
+                //Ont recupère les noms des produits 
+                productPage.elements.productTitle().then((elements)=>{
+                    const produitsApresTri = Array.from(elements).map((el) => el.innerText.trim());
+
+                    // Vérifier que les produits sont bien triés dans l'ordre alphabétique
+                    const produitsManuelTrie = Array.from(produitNonTrier).sort().reverse();
+
+                    expect(produitsApresTri).to.deep.equal(produitsManuelTrie);
+                })
+            })
     })
 })

@@ -36,6 +36,11 @@ class ProductsPage {
   verifierTriSelectionne(valeur) {
     this.elements.sortDropdown().should("have.value", valeur);
   }
+
+  // NGAB : 18/02/2025 list des titres 
+  recuperationListTitreProduit(){
+    this.elements.productTitle();
+  }
 }
 
 export default new ProductsPage();
