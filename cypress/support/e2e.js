@@ -18,3 +18,5 @@ import './commands'
 // grep
 const registerCypressGrep = require('@cypress/grep')
 registerCypressGrep()
+
+import 'cypress-mochawesome-reporter/register';
