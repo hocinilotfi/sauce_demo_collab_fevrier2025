@@ -12,15 +12,15 @@ class cartPage {
   }
 
   clickqueCartbutton(){
-       this.elements.Checkoutbuton().click();
+       this.elements.checkoutButton().click();
   }
 
   clickCheckoutButton(){
-    this.elements.Checkoutbuton().click();
+    this.elements.checkoutButton().click();
   }
 
   clickRemoveButton(){
-    this.elements.removebuton().click();
+    this.elements.removeButton().click();
   }
 
 
