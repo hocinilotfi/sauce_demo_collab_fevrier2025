@@ -10,8 +10,8 @@ describe('detailles product', { tags: '@regression' },  () => {
         const productName = $itemname.text().trim();
         productsPage.cliquerSurProduit(productName)
         cy.url().should("include", "inventory-item");
-        cy.get(".inventory_details_name").should("contain", productName);
-        cy.go("back");
+        cy.get(".inventory_details_name").should("contain",productName);
+        
       })
     })
   })
