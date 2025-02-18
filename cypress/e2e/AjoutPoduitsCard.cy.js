@@ -5,7 +5,7 @@ import loginPage from "../pages/login.page";
 import productPage from "../pages/product.page";
 
 
-describe("Test affichage des produits ajoutés dans cart",{tags:'@regressio3' },()=>{
+describe("Test affichage des produits ajoutés dans cart",()=>{
     
     context("Test affichage des produits ajoutés dans cart", () => {
         beforeEach(() =>{

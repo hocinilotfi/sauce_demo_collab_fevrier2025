@@ -3,7 +3,7 @@
 import loginPage from "../pages/login.page"
 import productPage from "../pages/product.page";
 
-describe("Test Tri",{tags:'@regressio4'} ,() => {
+describe("Test Tri",() => {
     beforeEach(() => {
         cy.visit("https://www.saucedemo.com");
 
