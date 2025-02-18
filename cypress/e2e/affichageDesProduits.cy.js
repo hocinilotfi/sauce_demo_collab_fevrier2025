@@ -4,7 +4,7 @@ import loginPage from "../pages/login.page";
 import productsPage from "../pages/product.page"; // Assurez-vous que le chemin est correct
 
 describe("Test affichage des produits", () => {
-    let produitsAffiches = [];
+    
 
     context("Test affichage des produits", () => {
         beforeEach(() => {
@@ -13,12 +13,10 @@ describe("Test affichage des produits", () => {
         });
 
         it("Récupérer la liste des produits affichés", () => {
-
-            productsPage.elements.productTitle().then(($elements) => {
-                produitsAffiches = $elements.toArray().map(el => el.innerText);   
-                expect(produitsAffiches.length).to.be.greaterThan(0); 
-            });
+            productsPage.elements.productTitle()
+                .should('have.length.greaterThan', 0)
         });
+        
         
     });
 });
