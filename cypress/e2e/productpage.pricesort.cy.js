@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import loginPage from "../../pages/login.page"
-import ProductsPage from "../../pages/product.page"
+import loginPage from "../pages/login.page"
+import ProductsPage from "../pages/product.page"
 
 describe('Le tri des produits : Prix', () => {
     
