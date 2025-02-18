@@ -11,7 +11,7 @@ describe('Le tri des produits : Prix', { tags: '@regression' }, () => {
     })
 
     context('Page des produits : tri par prix ', () => {
-        it("Tri par prix croissant", () => {
+        it("Tri par prix croissant", { tags: '@tc-004' }, () => {
             let prixNonTries = [];
         
             ProductsPage.elements.productPrice()
@@ -30,7 +30,7 @@ describe('Le tri des produits : Prix', { tags: '@regression' }, () => {
         });
         
 
-        it('trier par prix décroissant', () => {
+        it('trier par prix décroissant', { tags: '@tc-004' }, () => {
             let prixNonTries = [];
             ProductsPage.elements.productPrice()
                 .then((elements) => {

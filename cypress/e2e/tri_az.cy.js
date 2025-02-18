@@ -14,7 +14,7 @@ describe("Test Tri", { tags: '@nonregression' }, () => {
         cy.url().should("include", "/inventory.html");
     });
 
-    it("Tri Alphabétique A-Z", () => {
+    it("Tri Alphabétique A-Z",{ tags: '@tc-003' }, () => {
         let produitNonTrier = [];
 
         productPage.elements.productTitle()
@@ -40,7 +40,7 @@ describe("Test Tri", { tags: '@nonregression' }, () => {
             })
     })
 
-    it("Tri Alphabétique Z-A",()=>{
+    it("Tri Alphabétique Z-A", { tags: '@tc-003' }, ()=>{
         let produitNonTrier = [];
         productPage.elements.productTitle()
             .then((elements)=>{
