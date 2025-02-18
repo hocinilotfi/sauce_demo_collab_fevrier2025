@@ -30,7 +30,7 @@ describe("Test Tri", () => {
 
                 //Ont recupère les noms des produits 
                 productPage.elements.productTitle().then((elements)=>{
-                    const produitsApresTri = Array.from(elements).map((el) => el.innerText.trim());
+                    const produitsApresTri = Array.from(elements).map((el) => el.innerText);
 
                     // Vérifier que les produits sont bien triés dans l'ordre alphabétique
                     const produitsManuelTrie = Array.from(produitNonTrier).sort();
@@ -44,7 +44,7 @@ describe("Test Tri", () => {
         let produitNonTrier = [];
         productPage.elements.productTitle()
             .then((elements)=>{
-                produitNonTrier = Array.from(elements).map((el)=> el.innerText.trim());
+                produitNonTrier = Array.from(elements).map((el)=> el.innerText);
             })
             .then(() => {
                 //Ont applique le Tri "A-Z"
@@ -55,7 +55,7 @@ describe("Test Tri", () => {
 
                 //Ont recupère les noms des produits 
                 productPage.elements.productTitle().then((elements)=>{
-                    const produitsApresTri = Array.from(elements).map((el) => el.innerText.trim());
+                    const produitsApresTri = Array.from(elements).map((el) => el.innerText);
 
                     // Vérifier que les produits sont bien triés dans l'ordre alphabétique
                     const produitsManuelTrie = Array.from(produitNonTrier).sort().reverse();
