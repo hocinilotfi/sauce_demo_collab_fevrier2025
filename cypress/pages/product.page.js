@@ -37,8 +37,6 @@ class ProductsPage {
   verifierTriSelectionne(valeur) {
     this.elements.sortDropdown().should("have.value", valeur);
   }
-
-
   recuperationListTitreProduit(){
     this.elements.productTitle();
   }
