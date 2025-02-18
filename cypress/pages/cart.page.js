@@ -1,7 +1,7 @@
 class cartPage {
     elements = {
-        checkoutButton: () => cy.get('#checkout'),
-        cartButton: () => cy.get('#shopping_cart_container'),
+      checkoutButton: () => cy.get('#checkout'),
+      cartButton: () => cy.get('#shopping_cart_container'),
         badgeButton: () => cy.get('[data-test="shopping-cart-badge"]'),
         continueButton: () => cy.get('#continue-shopping'),
         removeButton: () => cy.get('#remove-sauce-labs-backpack"')
@@ -15,15 +15,12 @@ class cartPage {
        this.elements.Checkoutbuton().click();
   }
 
-  clickCheckoutButton(){
-    this.elements.Checkoutbuton().click();
+  clickCheckoutButton() {
+    this.elements.checkoutButton().click();
   }
-
   clickRemoveButton(){
     this.elements.removebuton().click();
   }
-
-
   getBadgeElement() {
     return this.elements.badgeButton();
 }

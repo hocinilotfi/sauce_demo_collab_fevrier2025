@@ -12,8 +12,6 @@ class ProductsPage {
 
   cliquerSurProduit(nomProduit) {
     this.elements.productTitle().contains(nomProduit).click();
-    
-
   }
 
    ajouterProduitAuPanier(nomProduit) {
@@ -46,6 +44,5 @@ class ProductsPage {
   }
 
 }
-
 export default new ProductsPage();
 
