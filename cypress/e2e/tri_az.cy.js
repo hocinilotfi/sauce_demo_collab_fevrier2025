@@ -17,7 +17,7 @@ describe("Test Tri", () => {
     it("Tri Alphabétique A-Z", () => {
         let produitNonTrier = [];
 
-        productPage.recuperationListTitreProduit()
+        productPage.elements.productTitle()
             .then((elements) =>{
                 produitNonTrier =Array.from(elements).map((el) => el.innerText.trim());
             })
@@ -42,7 +42,7 @@ describe("Test Tri", () => {
 
     it("Tri Alphabétique Z-A",()=>{
         let produitNonTrier = [];
-        productPage.recuperationListTitreProduit()
+        productPage.elements.productTitle()
             .then((elements)=>{
                 produitNonTrier = Array.from(elements).map((el)=> el.innerText.trim());
             })
