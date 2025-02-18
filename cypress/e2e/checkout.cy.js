@@ -7,7 +7,7 @@ import checkoutinformationpagePage from "../pages/checkoutinformationpage.page"
 import CheckoutOvervieuwPage from "../pages/CheckoutOvervieuw.page"
 import checkoutCompletePage from "../pages/checkout.complete.page"
 
-describe("checkout", () => {
+describe("checkout", { tags: '@regression1' }, () => {
 
     it("checkout", () => {
         cy.visit('https://www.saucedemo.com/')
