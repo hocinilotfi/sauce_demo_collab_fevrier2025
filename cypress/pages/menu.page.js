@@ -4,6 +4,7 @@ class MenuPage{
         allItem : () => cy.get("#inventory_sidebar_link"),  
         logOut : () => cy.get("#logout_sidebar_link"),
         resetAppState : () => cy.get("#reset_sidebar_link"),
+        menuContainer: () => cy.get(".bm-menu-wrap"),
 
     };
 
