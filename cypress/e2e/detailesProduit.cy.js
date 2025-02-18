@@ -10,13 +10,8 @@ describe('detailles product', { tags: '@regression' },  () => {
         const productName = $itemname.text().trim();
         productsPage.cliquerSurProduit(productName)
         cy.url().should("include", "inventory-item");
-<<<<<<< HEAD
         cy.get(".inventory_details_name").should("contain",productName);
-        
-=======
-        cy.get(".inventory_details_name").should("contain", productName);
-        cy.go("back");
->>>>>>> 829c7e7 (ajout du test detailles product)
+        cy.go("back")
       })
     })
   })
